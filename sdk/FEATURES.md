@@ -2,30 +2,30 @@
 
 Below are the list of features that are currently available in the KFP Tekton compiler along with its implementation. With the current implementation, we are getting a greater than [80% success rate for compilation tests we are running over approximately 90 pipelines](/sdk/python/tests/README.md) spread across different parts of the Kubeflow Pipeline samples and tests. 
 
-- [Pipeline DSL features with native Tekton implementation](#pipeline-dsl-features-with-native-tekton-implementation)
-    + [pod_annotations and pod_labels](#pod_annotations-and-pod_labels)
-    + [Retries](#retries)
-    + [Volumes](#volumes)
-    + [Timeout for Tasks and Pipelines](#timeout-for-tasks-and-pipelines)
-    + [RunAfter](#runafter)
-    + [Input Parameters](#input-parameters)
-    + [ContainerOp](#containerop)
-    + [Affinity, Node Selector, and Tolerations](#affinity-node-selector-and-tolerations)
-    + [ImagePullSecrets](#imagepullsecrets)
-- [Pipeline DSL features with custom Tekton implementation](#pipeline-dsl-features-with-custom-tekton-implementation)
-  * [Features with same behavior as Argo](#features-with-same-behavior-as-argo)
-    + [InitContainers](#initcontainers)
-    + [Conditions](#conditions)
-    + [ResourceOp, VolumeOp, and VolumeSnapshotOp](#resourceop-volumeop-and-volumesnapshotop)
-    + [Output Parameters](#output-parameters)
-    + [Input Artifacts](#input-artifacts)
-    + [Output Artifacts](#output-artifacts)
-  * [Features with limitations](#features-with-limitations)
-    + [ParallelFor](#parallelfor) - [Tracking issue][ParallelFor]
-    + [Variable Substitutions](#variable-substitutions) - [Tracking issue][VarSub]
-  * [Features with different behavior than Argo](#features-with-different-behavior-than-argo)
-    + [Sidecars](#sidecars) - [Tracking issue][Sidecars]
-- [Pipeline features that are unavailable on Tekton](#pipeline-features-that-are-unavailable-on-tekton)
+  - [Pipeline DSL features with native Tekton implementation](#pipeline-dsl-features-with-native-tekton-implementation)
+      - [pod_annotations and pod_labels](#pod_annotations-and-pod_labels)
+      - [Retries](#retries)
+      - [Volumes](#volumes)
+      - [Timeout for Tasks and Pipelines](#timeout-for-tasks-and-pipelines)
+      - [RunAfter](#runafter)
+      - [Input Parameters](#input-parameters)
+      - [ContainerOp](#containerop)
+      - [Affinity, Node Selector, and Tolerations](#affinity-node-selector-and-tolerations)
+      - [ImagePullSecrets](#imagepullsecrets)
+  - [Pipeline DSL features with custom Tekton implementation](#pipeline-dsl-features-with-custom-tekton-implementation)
+    - [Features with same behavior as Argo](#features-with-same-behavior-as-argo)
+      - [InitContainers](#initcontainers)
+      - [Conditions](#conditions)
+      - [ResourceOp, VolumeOp, and VolumeSnapshotOp](#resourceop-volumeop-and-volumesnapshotop)
+      - [Output Parameters](#output-parameters)
+      - [Input Artifacts](#input-artifacts)
+      - [Output Artifacts](#output-artifacts)
+    * [Features with limitations](#features-with-limitations)
+      + [ParallelFor](#parallelfor) - [Tracking issue][ParallelFor]
+      + [Variable Substitutions](#variable-substitutions) - [Tracking issue][VarSub]
+    * [Features with different behavior than Argo](#features-with-different-behavior-than-argo)
+      + [Sidecars](#sidecars) - [Tracking issue][Sidecars]
+  - [Pipeline features that are unavailable on Tekton](#pipeline-features-that-are-unavailable-on-tekton)
     + [Exit Handler](#exit-handler) - [Tracking PR][exitHandler]
 
 # Pipeline DSL features with native Tekton implementation
