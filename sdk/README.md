@@ -73,7 +73,7 @@ virtual environment first:
     python3 -m venv .venv
     source .venv/bin/activate
 
-    pip install kfp-tekton
+    pip install kfp-tekton==0.5.1
 
 Alternatively you can install the latest version of the `kfp-tekton` compiler
 from source by cloning the repository [https://github.com/kubeflow/kfp-tekton](https://github.com/kubeflow/kfp-tekton):
@@ -208,3 +208,9 @@ your code changes are improving the number of successfully compiled KFP pipeline
 - If you run into the error `bad interpreter: No such file or director` when trying
   to use Python's venv, remove the current virtual environment in the `.venv` directory
   and create a new one using `virtualenv .venv`
+
+---
+
+Latest commit: [34c168f](https://github.com/kubeflow/kfp-tekton/tree/34c168f/sdk/)
+
+---

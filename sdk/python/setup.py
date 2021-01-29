@@ -52,8 +52,7 @@ development stage. Contributions are welcome: {}
 """.format(HOMEPAGE)
 
 REQUIRES = [
-    'kfp==1.0.4',
-    'kubernetes==11.0.0'
+    'kfp==1.1.2'
 ]
 
 logging.basicConfig()
