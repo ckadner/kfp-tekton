@@ -18,7 +18,7 @@ RUN go build -o /go/src/github.com/kubeflow/pipelines/bazel-bin/backend/src/apis
 # 2. Compile preloaded pipeline samples
 FROM python:3.5 as compiler
 RUN apt-get update -y && apt-get install --no-install-recommends -y -q default-jdk python3-setuptools python3-dev jq
-RUN wget https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py
+RUN wget https://bootstrap.pypa.io/3.5/get-pip.py && python3 get-pip.py
 COPY backend/requirements.txt .
 RUN python3 -m pip install -r requirements.txt
 
